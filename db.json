@@ -1,0 +1,34 @@
+{
+  "posts": [
+    {
+      "id": "a076",
+      "number": 1,
+      "title": "лоо",
+      "body": "орп"
+    },
+    {
+      "id": "e8c8",
+      "number": 2,
+      "title": "sad",
+      "body": "asd"
+    },
+    {
+      "id": "412c",
+      "number": 3,
+      "title": "asd",
+      "body": "asd"
+    },
+    {
+      "id": "555c",
+      "number": 4,
+      "title": "dasd",
+      "body": "sadas"
+    },
+    {
+      "id": "f184",
+      "title": "гншозж",
+      "body": "ролпор",
+      "number": 5
+    }
+  ]
+}
