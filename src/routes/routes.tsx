@@ -3,8 +3,9 @@ import Posts from "../pages/Posts";
 import PostsTrash from "../pages/PostsTrash";
 
 
-export const routes = createBrowserRouter([
 
+
+export const routes = createBrowserRouter([
    {
       path: '/',
       element: <Posts />,

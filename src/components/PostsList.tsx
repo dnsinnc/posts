@@ -17,9 +17,9 @@ import {
 const PostList = () => {
    const { data: posts, isLoading, error } = postAPI.useFetchAllPostsQuery(100)
    // eslint-disable-next-line no-empty-pattern
-   const [deletePost, { }] = postAPI.useDeletePostMutation()
+   const [deletePost] = postAPI.useDeletePostMutation()
    // eslint-disable-next-line no-empty-pattern
-   const [editPostFunc, { }] = postAPI.useEditPostFuncMutation()
+   const [editPostFunc] = postAPI.useEditPostFuncMutation()
    const [post, setPost] = useState({ title: '', body: '' })
    const [openEditor, setOpenEditor] = useState(false)
    const [editPost, setEditPost] = useState()

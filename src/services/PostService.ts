@@ -5,7 +5,7 @@ import { IPost } from "../models/IPost"
 
 export const postAPI = createApi({
    reducerPath: 'postAPI',
-   baseQuery: fetchBaseQuery({ baseUrl: 'http://localhost:300' }),
+   baseQuery: fetchBaseQuery({ baseUrl: 'http://localhost:3000' }),
    tagTypes: ['Post'],
    endpoints: (build) => ({
       fetchAllPosts: build.query<IPost[], number>({

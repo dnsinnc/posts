@@ -5,15 +5,14 @@ import { IPost } from "../../models/IPost"
 interface BasketState{
    items: IPost[],
    isLoading: boolean,
-   error: string
+   error: string,
 }
 
 
 const initialState: BasketState = {
-   
-   items: [...JSON.parse(localStorage.getItem('items')) || []],
+   items: [],
    isLoading: false,
-   error: ''
+   error: '',
 }
 
 

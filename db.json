@@ -1,34 +1,22 @@
 {
   "posts": [
     {
-      "id": "a076",
-      "number": 1,
-      "title": "лоо",
-      "body": "орп"
+      "id": "16aa",
+      "title": "ячсЯч",
+      "body": "ЯЧыв",
+      "number": 1
     },
     {
-      "id": "e8c8",
-      "number": 2,
-      "title": "sad",
-      "body": "asd"
+      "id": "8094",
+      "title": "фыв",
+      "body": "фывывф",
+      "number": 2
     },
     {
-      "id": "412c",
+      "id": "b76f",
       "number": 3,
-      "title": "asd",
-      "body": "asd"
-    },
-    {
-      "id": "555c",
-      "number": 4,
-      "title": "dasd",
-      "body": "sadas"
-    },
-    {
-      "id": "f184",
-      "title": "гншозж",
-      "body": "ролпор",
-      "number": 5
+      "title": "ыыфвыфв",
+      "body": "ывфв"
     }
   ]
 }
