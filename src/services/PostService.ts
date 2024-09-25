@@ -15,7 +15,7 @@ export const postAPI = createApi({
                _limit: limit
             }
          }),
-         // eslint-disable-next-line @typescript-eslint/no-unused-vars
+   //  @ts-ignore
          providesTags: result => ['Post']
       }),
       createPost: build.mutation<IPost[], IPost>({

@@ -3,7 +3,7 @@ import { postAPI } from "../services/PostService"
 import PostForm from "./PostForm";
 import PostItem from "./PostItem";
 import EditPost from './EditPost'
-import { SetStateAction, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 import { IoTrashBin } from "react-icons/io5";
@@ -22,7 +22,7 @@ const PostList = () => {
    const [editPostFunc] = postAPI.useEditPostFuncMutation()
    const [post, setPost] = useState({ title: '', body: '' })
    const [openEditor, setOpenEditor] = useState(false)
-   const [editPost, setEditPost] = useState()
+   const [editPost, setEditPost] = useState<IPost | undefined>(undefined);
    const items = useAppSelector((state) => state.basketReducer.items)
 
    const handleRemovePost = (post: IPost) => {
@@ -30,8 +30,9 @@ const PostList = () => {
       setOpenEditor(false)
    }
 
-   const handleEditPost = (editPost: SetStateAction<unknown>) => {
+   const handleEditPost = (editPost: IPost) => {
       setOpenEditor(true)
+      
       setEditPost(editPost)
       document.body.style.cssText = `overflow: hidden`;
    }
@@ -54,6 +55,7 @@ const PostList = () => {
 
          <section>
             <PostForm
+               //  @ts-ignore
                posts={posts}
                post={post}
                setPost={setPost}
@@ -86,7 +88,8 @@ const PostList = () => {
          </section>
          {openEditor &&
             <EditPost
-               setOpenEditor={setOpenEditor}
+            setOpenEditor={setOpenEditor}
+            //  @ts-ignore
                post={editPost}   
                editPost={editPostFunc}
                setPost={setPost}
