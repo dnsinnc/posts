@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { deleteItem } from "../store/reducers/TrashSlice";
+import { deletAllItems, deleteItem } from "../store/reducers/TrashSlice";
 import { useAppDispatch, useAppSelector } from "../hooks/redux";
 import { postAPI } from "../services/PostService";
 
@@ -26,13 +26,13 @@ function PostsTrash() {
    return (
       <section>
          <div className="trash__header">
-            <Link className='back' to={'/'}><IoReturnDownBackSharp /></Link>
+            <Link className='back' to={'/posts'}><IoReturnDownBackSharp /></Link>
             <h1 className="main-title">Deleted Posts</h1>
          </div>
 
          <div className='myposts'>
             <TransitionGroup>
-               {items.length === 0 ? <p className="nopost">NO DELETED POSTS :(</p> :
+               {items.length === 0 ? <p className="nopost">No deleted posts :(</p> :
                   items.map((post) =>
                      <CSSTransition
                         timeout={500}
@@ -57,6 +57,10 @@ function PostsTrash() {
                   )}
             </TransitionGroup>
          </div>
+         {items.length ?  <CustomButton onClick={() => dispatch(deletAllItems())}>
+            DELETE ALL
+         </CustomButton>: ''}
+         
       </section>
    );
 }

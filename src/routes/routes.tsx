@@ -7,12 +7,12 @@ import PostsTrash from "../pages/PostsTrash";
 
 export const routes = createBrowserRouter([
    {
-      path: '/',
+      path: '/posts',
       element: <Posts />,
    },
 
    {
-      path: '/trash',
+      path: '/posts/trash',
       element: <PostsTrash />,
    }
 ])

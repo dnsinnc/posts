@@ -49,7 +49,7 @@ const PostList = () => {
    return (
       <main className="myposts">
          <header className="mypost__header">
-            <Link className="post-trash" to={'/trash'}><IoTrashBin /> <span>{items.length}</span></Link>
+            <Link className="post-trash" to={'/posts/trash'}><IoTrashBin /> <span>{items.length}</span></Link>
             <h1 className="main-title">My Posts</h1>
          </header>
 

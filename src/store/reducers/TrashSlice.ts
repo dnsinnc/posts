@@ -1,5 +1,6 @@
 import { PayloadAction, createSlice } from "@reduxjs/toolkit"
 import { IPost } from "../../models/IPost"
+import { WritableDraft } from "immer";
 
 
 interface BasketState{
@@ -33,11 +34,16 @@ export const TrashSlicer = createSlice({
 
          localStorage.setItem('items', JSON.stringify(items));
          state.items = items;          
-      }
+      },
+      deletAllItems: (state) => {
+         const items: WritableDraft<IPost>[] = [];
+         localStorage.setItem('items', JSON.stringify(items));
+         state.items = items;
+      },
     }
 })
 
 
-export const { addItem, deleteItem } = TrashSlicer.actions
+export const { addItem, deleteItem, deletAllItems } = TrashSlicer.actions
 
 export default TrashSlicer.reducer
